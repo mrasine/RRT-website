@@ -3,51 +3,38 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
-const title = "Schedule & Pricing | Rhythmic Ribbon of Texas";
-const description = "View class schedules and pricing for Rhythmic Ribbon of Texas. Recreational, competitive, and pre-team programs. Free trial class available.";
+const title = "Schedule | Rhythmic Ribbon of Texas";
+const description = "View beginner class schedules for Rhythmic Ribbon of Texas in McKinney and Frisco. Contact us for competitive team and advanced program schedules.";
 
-const schedule = [
-    { day: "Monday", classes: [
-        { time: "4:00 PM", name: "Recreational (Ages 3-5)", duration: "45 min" },
-        { time: "5:00 PM", name: "Recreational (Ages 6-8)", duration: "60 min" },
-        { time: "6:15 PM", name: "Pre-Team", duration: "90 min" },
-        { time: "7:45 PM", name: "Competitive Team", duration: "2 hrs" }
-    ]},
-    { day: "Tuesday", classes: [
-        { time: "4:00 PM", name: "Ballet (Ages 8-12)", duration: "60 min" },
-        { time: "5:15 PM", name: "Recreational (Ages 9-12)", duration: "60 min" },
-        { time: "6:30 PM", name: "Xcel Program", duration: "90 min" }
-    ]},
-    { day: "Wednesday", classes: [
-        { time: "4:00 PM", name: "Recreational (Ages 3-5)", duration: "45 min" },
-        { time: "5:00 PM", name: "Multi-Sport Flexibility", duration: "60 min" },
-        { time: "6:15 PM", name: "Pre-Team", duration: "90 min" },
-        { time: "7:45 PM", name: "Competitive Team", duration: "2 hrs" }
-    ]},
-    { day: "Thursday", classes: [
-        { time: "4:00 PM", name: "Recreational (Ages 6-8)", duration: "60 min" },
-        { time: "5:15 PM", name: "Ballet (Ages 8-12)", duration: "60 min" },
-        { time: "6:30 PM", name: "Xcel Program", duration: "90 min" }
-    ]},
-    { day: "Friday", classes: [
-        { time: "4:00 PM", name: "Recreational (Ages 5-7)", duration: "60 min" },
-        { time: "5:15 PM", name: "Open Gym", duration: "90 min" }
-    ]},
-    { day: "Saturday", classes: [
-        { time: "9:00 AM", name: "Recreational (All Ages)", duration: "60 min" },
-        { time: "10:15 AM", name: "Pre-Team", duration: "90 min" },
-        { time: "12:00 PM", name: "Competitive Team", duration: "2 hrs" },
-        { time: "2:15 PM", name: "Private Lessons", duration: "varies" }
-    ]}
+const beginnerSchedule = [
+    { 
+        location: "McKinney", 
+        address: "4260 Eldorado Parkway, McKinney, TX 75070",
+        classes: [
+            { day: "Monday", time: "4:00 PM", name: "Beginners (Ages 3-5)", duration: "45 min" },
+            { day: "Monday", time: "5:00 PM", name: "Beginners (Ages 6-8)", duration: "60 min" },
+            { day: "Wednesday", time: "4:00 PM", name: "Beginners (Ages 3-5)", duration: "45 min" },
+            { day: "Saturday", time: "9:00 AM", name: "Beginners (All Ages)", duration: "60 min" }
+        ]
+    },
+    { 
+        location: "Frisco", 
+        address: "Frisco Location",
+        classes: [
+            { day: "Tuesday", time: "4:00 PM", name: "Beginners (Ages 6-8)", duration: "60 min" },
+            { day: "Thursday", time: "5:15 PM", name: "Beginners (Ages 9-12)", duration: "60 min" },
+            { day: "Saturday", time: "10:15 AM", name: "Beginners (All Ages)", duration: "60 min" }
+        ]
+    }
 ];
 
-const pricing = [
-    { program: "Recreational", price: "$85", period: "month", note: "1 class per week" },
-    { program: "Pre-Team", price: "$165", period: "month", note: "2 classes per week" },
-    { program: "Xcel Program", price: "$195", period: "month", note: "2-3 classes per week" },
-    { program: "Competitive Team", price: "$285", period: "month", note: "Unlimited training" },
-    { program: "Ballet", price: "$65", period: "month", note: "Add-on to any program" },
-    { program: "Private Lessons", price: "$75", period: "hour", note: "One-on-one coaching" }
+const otherPrograms = [
+    "Pre-Team",
+    "Competitive Team (Levels 3-10)", 
+    "Xcel Program",
+    "Ballet",
+    "Multi-Sport Flexibility",
+    "Private Lessons"
 ];
 ---
 
@@ -58,70 +45,82 @@ const pricing = [
         <section class="page-header">
             <div class="container">
                 <span class="section-tag">Schedule</span>
-                <h1>Classes &<br><span class="highlight">Pricing</span></h1>
-                <p class="subtitle">Transparent pricing. Flexible scheduling. Free trial class for new students.</p>
+                <h1>Class<br><span class="highlight">Schedule</span></h1>
+                <p class="subtitle">Beginner classes in McKinney and Frisco. Contact us for all other program schedules.</p>
             </div>
         </section>
         
+        <!-- Beginner Classes Schedule -->
         <section class="section">
             <div class="container">
-                <h2 class="section-title">Weekly<span class="highlight">Schedule</span></h2>
+                <h2 class="section-title">Beginner<span class="highlight">Classes</span></h2>
+                <p class="section-subtitle">Perfect for ages 3+. No experience needed. Free trial class available.</p>
                 
-                <div class="schedule-grid">
-                    {schedule.map(day => (
-                        <div class="day-card">
-                            <h3>{day.day}</h3>
-                            <div class="classes">
-                                {day.classes.map(cls => (
-                                    <div class="class-item">
-                                        <span class="time">{cls.time}</span>
-                                        <div class="class-info">
-                                            <span class="name">{cls.name}</span>
+                <div class="locations-grid">
+                    {beginnerSchedule.map(location => (
+                        <div class="location-card">
+                            <div class="location-header">
+                                <h3>{location.location}</h3>
+                                <p class="address">{location.address}</p>
+                            </div>
+                            
+                            <div class="schedule-list">
+                                {location.classes.map(cls => (
+                                    <div class="schedule-item">
+                                        <div class="day-time">
+                                            <span class="day">{cls.day}</span>
+                                            <span class="time">{cls.time}</span>
+                                        </div>
+                                        <div class="class-details">
+                                            <span class="class-name">{cls.name}</span>
                                             <span class="duration">{cls.duration}</span>
                                         </div>
                                     </div>
                                 ))}
                             </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
-        </section>
-        
-        <section class="section pricing-section">
-            <div class="container">
-                <h2 class="section-title">Monthly<span class="highlight">Pricing</span></h2>
-                
-                <div class="pricing-grid">
-                    {pricing.map(item => (
-                        <div class="pricing-card">
-                            <div class="pricing-header">
-                                <h3>{item.program}</h3>
-                                <div class="price">
-                                    <span class="amount">{item.price}</span>
-                                    <span class="period">/{item.period}</span>
-                                </div>
-                            </div>
-                            <p class="note">{item.note}</p>
                             
-                            <a href="/contact/" class="btn btn-outline">Get Started</a>
+                            <a href="/contact/" class="btn btn-primary">Book Free Trial</a>
                         </div>
                     ))}
-                </div>
-                
-                <div class="pricing-notes">
-                    <p><strong>Additional Fees:</strong> Annual registration fee of $50 per student. Competition fees apply for team members. Family discounts available for multiple children.</p>
                 </div>
             </div>
         </section>
         
-        <section class="cta-section">
+        <!-- Other Programs -->
+        <section class="section other-programs">
             <div class="container">
-                <div class="trial-card">
-                    <h2>Free Trial Class</h2>
-                    <p>Not sure which program is right? Schedule a free trial class and let our coaches assess the best fit for your child.</p>
+                <h2 class="section-title">Other<span class="highlight">Programs</span></h2>
+                <p class="section-subtitle">Contact us for schedule and pricing information for these programs.</p>
+                
+                <div class="programs-grid">
+                    {otherPrograms.map(program => (
+                        <div class="program-item">
+                            <span class="program-name">{program}</span>
+                            <span class="contact-badge">Contact for Schedule</span>
+                        </div>
+                    ))}
+                </div>
+                
+                <div class="contact-cta">
+                    <a href="/contact/" class="btn btn-primary btn-lg">Contact Us for Details</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Pricing Info -->
+        <section class="section pricing-info">
+            <div class="container">
+                <div class="info-card">
+                    <h3>Pricing</h3>
+                    <p>Pricing varies by program and commitment level. Contact Coach Ella for current rates and family discounts.</p>
                     
-                    <a href="/contact/" class="btn btn-primary btn-lg">Book Your Free Trial</a>
+                    <ul class="info-list">
+                        <li>Free trial class for new students</li>
+                        <li>Family discounts available</li>
+                        <li>No long-term contracts required</li>
+                    </ul>
+                    
+                    <a href="/contact/" class="btn btn-outline">Get Pricing Info</a>
                 </div>
             </div>
         </section>
@@ -150,171 +149,188 @@ const pricing = [
         margin: 0 auto;
     }
     
-    .schedule-grid {
+    .locations-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.5rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
     }
     
-    .day-card {
-        background: white;
+    .location-card {
+        background: #1a1a1a;
         border-radius: 16px;
-        padding: 1.5rem;
-        box-shadow: var(--shadow);
+        padding: 2rem;
+        border: 1px solid #333;
     }
     
-    .day-card h3 {
-        font-size: 1.25rem;
+    .location-header {
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid var(--primary);
+    }
+    
+    .location-header h3 {
+        font-size: 1.5rem;
         color: var(--primary);
-        margin-bottom: 1rem;
-        padding-bottom: 0.75rem;
-        border-bottom: 2px solid #f0f0f0;
+        margin-bottom: 0.5rem;
     }
     
-    .class-item {
-        padding: 0.75rem 0;
-        border-bottom: 1px solid #f5f5f5;
-    }
-    
-    .class-item:last-child {
-        border-bottom: none;
-    }
-    
-    .time {
-        display: block;
-        font-weight: 700;
-        color: var(--dark);
+    .address {
+        color: #999;
         font-size: 0.9375rem;
     }
     
-    .class-info {
+    .schedule-list {
+        margin-bottom: 1.5rem;
+    }
+    
+    .schedule-item {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 0.25rem;
+        padding: 1rem 0;
+        border-bottom: 1px solid #333;
     }
     
-    .name {
+    .schedule-item:last-child {
+        border-bottom: none;
+    }
+    
+    .day-time {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+    
+    .day {
+        font-weight: 700;
+        color: var(--cream);
         font-size: 0.9375rem;
-        color: var(--dark);
+    }
+    
+    .time {
+        color: var(--primary);
+        font-weight: 600;
+    }
+    
+    .class-details {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0.25rem;
+    }
+    
+    .class-name {
+        color: var(--cream);
+        font-size: 0.9375rem;
     }
     
     .duration {
         font-size: 0.8125rem;
-        color: var(--gray);
-        background: #f5f5f5;
+        color: #888;
+        background: #2a2a2a;
         padding: 0.25rem 0.5rem;
         border-radius: 4px;
     }
     
-    .pricing-section {
-        background: var(--light);
+    .other-programs {
+        background: #0d0d0d;
     }
     
-    .pricing-grid {
+    .programs-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 1.5rem;
+        gap: 1rem;
+        margin-bottom: 2rem;
     }
     
-    .pricing-card {
-        background: white;
-        border-radius: 16px;
-        padding: 2rem;
-        box-shadow: var(--shadow);
-        text-align: center;
-        transition: transform 0.3s;
-    }
-    
-    .pricing-card:hover {
-        transform: translateY(-4px);
-    }
-    
-    .pricing-header {
-        margin-bottom: 1rem;
-    }
-    
-    .pricing-header h3 {
-        font-size: 1.25rem;
-        color: var(--dark);
-        margin-bottom: 0.75rem;
-    }
-    
-    .price {
-        display: flex;
-        align-items: baseline;
-        justify-content: center;
-        gap: 0.25rem;
-    }
-    
-    .amount {
-        font-family: 'Poppins', sans-serif;
-        font-size: 2.5rem;
-        font-weight: 800;
-        color: var(--primary);
-    }
-    
-    .period {
-        color: var(--gray);
-        font-size: 1rem;
-    }
-    
-    .note {
-        color: var(--gray);
-        font-size: 0.9375rem;
-        margin-bottom: 1.5rem;
-    }
-    
-    .pricing-notes {
-        background: white;
-        padding: 1.5rem 2rem;
+    .program-item {
+        background: #1a1a1a;
         border-radius: 12px;
-        margin-top: 2rem;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        border: 1px solid #333;
+    }
+    
+    .program-name {
+        font-weight: 600;
+        color: var(--cream);
+        font-size: 1.125rem;
+    }
+    
+    .contact-badge {
+        font-size: 0.8125rem;
+        color: var(--primary);
+        font-weight: 500;
+    }
+    
+    .contact-cta {
         text-align: center;
-        color: var(--gray);
     }
     
-    .cta-section {
-        padding: 4rem 0;
+    .pricing-info {
+        background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
     }
     
-    .trial-card {
-        background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-        color: white;
-        padding: 4rem;
-        border-radius: 24px;
+    .info-card {
+        background: #1a1a1a;
+        border-radius: 16px;
+        padding: 3rem;
+        max-width: 700px;
+        margin: 0 auto;
         text-align: center;
+        border: 1px solid #333;
     }
     
-    .trial-card h2 {
-        font-size: 2.5rem;
+    .info-card h3 {
+        font-size: 1.75rem;
+        color: var(--primary);
         margin-bottom: 1rem;
     }
     
-    .trial-card p {
-        font-size: 1.25rem;
-        opacity: 0.95;
-        max-width: 600px;
-        margin: 0 auto 2rem;
+    .info-card p {
+        color: #aaa;
+        margin-bottom: 1.5rem;
+        font-size: 1.0625rem;
+    }
+    
+    .info-list {
+        list-style: none;
+        margin-bottom: 2rem;
+    }
+    
+    .info-list li {
+        color: var(--cream);
+        padding: 0.5rem 0;
+        position: relative;
+        padding-left: 1.5rem;
+    }
+    
+    .info-list li::before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        color: var(--primary);
+        font-weight: 700;
     }
     
     @media (max-width: 1024px) {
-        .schedule-grid {
-            grid-template-columns: repeat(2, 1fr);
+        .locations-grid {
+            grid-template-columns: 1fr;
         }
         
-        .pricing-grid {
+        .programs-grid {
             grid-template-columns: repeat(2, 1fr);
         }
     }
     
     @media (max-width: 640px) {
-        .schedule-grid,
-        .pricing-grid {
+        .programs-grid {
             grid-template-columns: 1fr;
         }
         
-        .trial-card {
+        .info-card {
             padding: 2rem;
         }
     }
