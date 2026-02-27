@@ -1,0 +1,479 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const title = "Rhythmic Ribbon of Texas | Premier Rhythmic Gymnastics";
+const description = "Join McKinney's premier rhythmic gymnastics academy. Programs for ages 3+ from recreational to competitive. Expert coaching in a supportive environment.";
+---
+
+<Layout title={title} description={description}>
+    <Header />
+    
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <span class="hero-badge"><span class="badge-icon"></span> McKinney's Premier Academy</span>
+                <h1>Where Grace<br><span class="highlight">Meets Strength</span></h1>
+                <p class="hero-text">Rhythmic gymnastics for ages 3+. From first twirls to competitive excellence, we help every gymnast shine.</p>
+                
+                <div class="hero-actions">
+                    <a href="/contact/" class="btn btn-primary btn-lg">Book Free Trial Class</a>
+                    <a href="/programs/" class="btn btn-outline btn-lg">Explore Programs</a>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">3+</span>
+                        <span class="stat-label">Years Old</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">USAG</span>
+                        <span class="stat-label">Certified</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">6K+</span>
+                        <span class="stat-label">Followers</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="ribbon-circle">
+                    <div class="ribbon"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Programs Section -->
+        <section class="section programs">
+            <div class="container">
+                <h2 class="section-title">Programs for Every<br><span class="highlight">Gymnast</span></h2>
+                <p class="section-subtitle">From first steps on the mat to competitive excellence, we have a program that's right for your child.</p>
+                
+                <div class="program-cards">
+                    <a href="/programs/" class="program-card">
+                        <div class="card-icon recreational"></div>
+                        <h3>Recreational</h3>
+                        <p>Ages 3+. Fun fundamentals, flexibility, and a love for movement.</p>
+                        <span class="card-link">Learn More →</span>
+                    </a>
+                    
+                    <a href="/programs/" class="program-card">
+                        <div class="card-icon preteam"></div>
+                        <h3>Pre-Team</h3>
+                        <p>Bridge program building skills for competitive readiness.</p>
+                        <span class="card-link">Learn More →</span>
+                    </a>
+                    
+                    <a href="/programs/" class="program-card">
+                        <div class="card-icon competitive"></div>
+                        <h3>Competitive</h3>
+                        <p>USAG Levels 3-10. Serious training for dedicated athletes.</p>
+                        <span class="card-link">Learn More →</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Why RRT Section -->
+        <section class="section why-rrt">
+            <div class="container">
+                <div class="why-grid">
+                    <div class="why-content">
+                        <span class="section-tag">Why Choose Us</span>
+                        <h2>Small Classes.<br>Big Dreams.<br><span class="highlight">Real Results.</span></h2>
+                        
+                        <p>At Rhythmic Ribbon of Texas, every gymnast receives personalized attention in a supportive environment. Our certified coaches bring decades of experience to help your child thrive.</p>
+                        
+                        <ul class="feature-list">
+                            <li><span class="check">✓</span> USAG Certified Instruction</li>
+                            <li><span class="check">✓</span> Small Class Sizes</li>
+                            <li><span class="check">✓</span> State-of-the-Art Facility</li>
+                            <li><span class="check">✓</span> Competitive & Recreational Tracks</li>
+                        </ul>
+                        
+                        <a href="/about/" class="btn btn-secondary">Meet Coach Ella</a>
+                    </div>
+                    
+                    <div class="why-visual">
+                        <div class="feature-cards">
+                            <div class="feature-card">
+                                <span class="feature-number">15+</span>
+                                <span class="feature-label">Years Experience</span>
+                            </div>
+                            <div class="feature-card accent">
+                                <span class="feature-label">Located in</span>
+                                <span class="feature-text">McKinney, TX</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <h2>Ready to Start the Journey?</h2>
+                <p>Book a free trial class and see why families choose Rhythmic Ribbon of Texas.</p>
+                
+                <a href="/contact/" class="btn btn-primary btn-lg">Schedule Your Trial</a>
+            </div>
+        </section>
+    </main>
+    
+    <Footer />
+</Layout>
+
+<style>
+    .hero {
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        padding: 120px 5% 4rem;
+        background: linear-gradient(135deg, #fff 0%, #f8f9fa 50%, rgba(255,107,53,0.05) 100%);
+        gap: 4rem;
+    }
+    
+    .hero-content {
+        max-width: 600px;
+    }
+    
+    .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: rgba(255,107,53,0.1);
+        color: var(--primary);
+        padding: 0.5rem 1rem;
+        border-radius: 50px;
+        font-size: 0.875rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+    }
+    
+    .badge-icon {
+        width: 8px;
+        height: 8px;
+        background: var(--primary);
+        border-radius: 50%;
+    }
+    
+    .hero h1 {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+        color: var(--dark);
+    }
+    
+    .hero .highlight {
+        color: var(--primary);
+    }
+    
+    .hero-text {
+        font-size: 1.125rem;
+        color: var(--gray);
+        margin-bottom: 2rem;
+        max-width: 500px;
+    }
+    
+    .hero-actions {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 3rem;
+        flex-wrap: wrap;
+    }
+    
+    .btn-lg {
+        padding: 1rem 2rem;
+        font-size: 1.125rem;
+    }
+    
+    .hero-stats {
+        display: flex;
+        gap: 2.5rem;
+    }
+    
+    .stat {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .stat-number {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.75rem;
+        font-weight: 800;
+        color: var(--primary);
+    }
+    
+    .stat-label {
+        font-size: 0.875rem;
+        color: var(--gray);
+    }
+    
+    .hero-visual {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .ribbon-circle {
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    
+    .ribbon {
+        width: 200px;
+        height: 300px;
+        background: linear-gradient(180deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.1) 100%);
+        border-radius: 100px 100px 0 0;
+        transform: rotate(-15deg);
+    }
+    
+    .programs {
+        background: var(--light);
+    }
+    
+    .program-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+    
+    .program-card {
+        background: white;
+        border-radius: 16px;
+        padding: 2rem;
+        box-shadow: var(--shadow);
+        transition: all 0.3s;
+    }
+    
+    .program-card:hover {
+        transform: translateY(-8px);
+        box-shadow: var(--shadow-lg);
+    }
+    
+    .card-icon {
+        width: 64px;
+        height: 64px;
+        border-radius: 16px;
+        margin-bottom: 1.5rem;
+    }
+    
+    .card-icon.recreational {
+        background: linear-gradient(135deg, #FF6B35 0%, #FF8F6B 100%);
+    }
+    
+    .card-icon.preteam {
+        background: linear-gradient(135deg, #9B59B6 0%, #BB8FCE 100%);
+    }
+    
+    .card-icon.competitive {
+        background: linear-gradient(135deg, #F1C40F 0%, #F4D03F 100%);
+    }
+    
+    .program-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+        color: var(--dark);
+    }
+    
+    .program-card p {
+        color: var(--gray);
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+    }
+    
+    .card-link {
+        color: var(--primary);
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.25rem;
+        transition: gap 0.3s;
+    }
+    
+    .program-card:hover .card-link {
+        gap: 0.5rem;
+    }
+    
+    .why-rrt {
+        background: white;
+    }
+    
+    .why-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+    }
+    
+    .section-tag {
+        display: inline-block;
+        color: var(--primary);
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 0.875rem;
+        letter-spacing: 0.05em;
+        margin-bottom: 1rem;
+    }
+    
+    .why-content h2 {
+        font-size: clamp(2rem, 4vw, 3rem);
+        margin-bottom: 1.5rem;
+    }
+    
+    .why-content p {
+        color: var(--gray);
+        font-size: 1.125rem;
+        margin-bottom: 2rem;
+    }
+    
+    .feature-list {
+        list-style: none;
+        margin-bottom: 2rem;
+    }
+    
+    .feature-list li {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+        font-size: 1.0625rem;
+    }
+    
+    .check {
+        width: 24px;
+        height: 24px;
+        background: var(--primary);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.75rem;
+        flex-shrink: 0;
+    }
+    
+    .feature-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        max-width: 300px;
+        margin-left: auto;
+    }
+    
+    .feature-card {
+        background: white;
+        border-radius: 16px;
+        padding: 2rem;
+        box-shadow: var(--shadow);
+        text-align: center;
+    }
+    
+    .feature-card.accent {
+        background: var(--primary);
+        color: white;
+    }
+    
+    .feature-number {
+        display: block;
+        font-family: 'Poppins', sans-serif;
+        font-size: 3rem;
+        font-weight: 800;
+        color: var(--primary);
+    }
+    
+    .feature-card.accent .feature-number {
+        color: white;
+    }
+    
+    .feature-label {
+        display: block;
+        font-size: 0.875rem;
+        color: var(--gray);
+        margin-top: 0.25rem;
+    }
+    
+    .feature-card.accent .feature-label {
+        color: rgba(255,255,255,0.9);
+    }
+    
+    .feature-text {
+        display: block;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-top: 0.25rem;
+    }
+    
+    .cta-section {
+        background: linear-gradient(135deg, var(--dark) 0%, #1a252f 100%);
+        color: white;
+        text-align: center;
+        padding: 6rem 0;
+    }
+    
+    .cta-section h2 {
+        font-size: clamp(2rem, 4vw, 3rem);
+        margin-bottom: 1rem;
+    }
+    
+    .cta-section p {
+        font-size: 1.25rem;
+        color: rgba(255,255,255,0.8);
+        margin-bottom: 2rem;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    @media (max-width: 1024px) {
+        .hero {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 100%;
+        }
+        
+        .hero-text {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-actions {
+            justify-content: center;
+        }
+        
+        .hero-stats {
+            justify-content: center;
+        }
+        
+        .hero-visual {
+            display: none;
+        }
+        
+        .program-cards {
+            grid-template-columns: 1fr;
+        }
+        
+        .why-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .feature-cards {
+            margin: 0 auto;
+        }
+    }
+</style>

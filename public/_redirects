@@ -1,0 +1,12 @@
+[
+  {
+    "source": "</>",
+    "target": "/404/index.html",
+    "status": "404"
+  },
+  {
+    "source": "/404",
+    "target": "/404/",
+    "status": "301"
+  }
+]

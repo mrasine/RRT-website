@@ -1,0 +1,18 @@
+{
+  "name": "rrt-website",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Rhythmic Ribbon of Texas - Official Website",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^5.2.0"
+  },
+  "devDependencies": {
+    "@astrojs/sitemap": "^3.2.0"
+  }
+}

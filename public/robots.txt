@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rhythmicribbontexas.com/sitemap-index.xml

@@ -1,0 +1,240 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const title = "Programs | Rhythmic Ribbon of Texas";
+const description = "Explore our rhythmic gymnastics programs: recreational classes for ages 3+, pre-team, competitive team (Levels 3-10), Xcel program, and ballet. Find the perfect fit for your child.";
+
+const programs = [
+    {
+        title: "Recreational Classes",
+        age: "Ages 3+",
+        description: "Perfect for beginners! Our recreational program focuses on building foundational skills in a fun, supportive environment. Gymnasts learn basic body movements, apparatus handling, and develop flexibility and coordination.",
+        features: ["Fun-focused learning", "All apparatus introduction", "Flexibility & strength", "No competition required"],
+        color: "orange"
+    },
+    {
+        title: "Pre-Team",
+        age: "By Invitation",
+        description: "The bridge to competitive gymnastics. Pre-Team athletes develop the skills and discipline needed for our competitive program while still enjoying a balanced approach to training.",
+        features: ["Skill development focus", "Intro to routines", "Increased training time", "Competition preparation"],
+        color: "purple"
+    },
+    {
+        title: "Competitive Team",
+        age: "USAG Levels 3-10",
+        description: "For dedicated athletes ready to compete. Our competitive team trains year-round, participates in local and regional meets, and strives for excellence in every routine.",
+        features: ["USAG certified coaching", "Competition travel", "Goal-oriented training", "College prep support"],
+        color: "gold"
+    },
+    {
+        title: "Xcel Program",
+        age: "Bronze - Diamond",
+        description: "A flexible competitive track that allows gymnasts to compete with modified requirements. Perfect for athletes who want to compete but need a more flexible training schedule.",
+        features: ["Flexible scheduling", "Competitive opportunities", "Skill-appropriate requirements", "Fun team atmosphere"],
+        color: "teal"
+    },
+    {
+        title: "Ballet",
+        age: "Ages 8-12",
+        description: "Complement your gymnastics training with ballet! Our ballet classes focus on technique, grace, and the fundamental movements that enhance rhythmic gymnastics performance.",
+        features: ["Technical foundation", "Grace & poise", "Flexibility enhancement", "Performance skills"],
+        color: "pink"
+    },
+    {
+        title: "Multi-Sport Flexibility",
+        age: "All Ages",
+        description: "Cross-training for dancers, cheerleaders, figure skaters, and athletes. Improve flexibility, strength, and body awareness to enhance performance in your primary sport.",
+        features: ["Sport-specific training", "Flexibility focus", "Strength building", "Open to all athletes"],
+        color: "blue"
+    }
+];
+---
+
+<Layout title={title} description={description}>
+    <Header />
+    
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <span class="section-tag">Programs</span>
+                <h1>Find Your<br><span class="highlight">Perfect Program</span></h1>
+                <p class="subtitle">From first steps to competitive excellence, we have a program for every gymnast.</p>
+            </div>
+        </section>
+        
+        <section class="section">
+            <div class="container">
+                <div class="programs-grid">
+                    {programs.map(program => (
+                        <div class={`program-card ${program.color}`}>
+                            <div class="card-header">
+                                <span class="age-badge">{program.age}</span>
+                                <h2>{program.title}</h2>
+                            </div>
+                            
+                            <p class="description">{program.description}</p>
+                            
+                            <ul class="features">
+                                {program.features.map(feature => (
+                                    <li>{feature}</li>
+                                ))}
+                            </ul>
+                            
+                            <a href="/contact/" class="btn btn-primary">Learn More</a>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+        
+        <section class="cta-section">
+            <div class="container">
+                <h2>Not Sure Which Program?</h2>
+                <p>Contact us for a free assessment. We'll help you find the perfect fit for your child's age, skill level, and goals.</p>
+                
+                <a href="/contact/" class="btn btn-primary btn-lg">Schedule Free Assessment</a>
+            </div>
+        </section>
+    </main>
+    
+    <Footer />
+</Layout>
+
+<style>
+    .page-header {
+        background: linear-gradient(135deg, var(--dark) 0%, #1a252f 100%);
+        color: white;
+        padding: 160px 0 4rem;
+        text-align: center;
+    }
+    
+    .page-header h1 {
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+        margin-bottom: 1rem;
+    }
+    
+    .page-header .subtitle {
+        font-size: 1.25rem;
+        color: rgba(255,255,255,0.8);
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .programs-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    
+    .program-card {
+        background: white;
+        border-radius: 16px;
+        padding: 2.5rem;
+        box-shadow: var(--shadow);
+        border-top: 4px solid var(--primary);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .program-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-lg);
+    }
+    
+    .program-card.purple {
+        border-top-color: var(--secondary);
+    }
+    
+    .program-card.gold {
+        border-top-color: var(--accent);
+    }
+    
+    .program-card.teal {
+        border-top-color: #1ABC9C;
+    }
+    
+    .program-card.pink {
+        border-top-color: #E91E63;
+    }
+    
+    .program-card.blue {
+        border-top-color: #3498DB;
+    }
+    
+    .card-header {
+        margin-bottom: 1.5rem;
+    }
+    
+    .age-badge {
+        display: inline-block;
+        background: rgba(255,107,53,0.1);
+        color: var(--primary);
+        padding: 0.375rem 0.75rem;
+        border-radius: 50px;
+        font-size: 0.875rem;
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+    }
+    
+    .program-card.purple .age-badge {
+        background: rgba(155,89,182,0.1);
+        color: var(--secondary);
+    }
+    
+    .program-card h2 {
+        font-size: 1.75rem;
+        color: var(--dark);
+    }
+    
+    .description {
+        color: var(--gray);
+        line-height: 1.7;
+        margin-bottom: 1.5rem;
+    }
+    
+    .features {
+        list-style: none;
+        margin-bottom: 2rem;
+    }
+    
+    .features li {
+        padding-left: 1.5rem;
+        position: relative;
+        margin-bottom: 0.5rem;
+        color: var(--dark);
+    }
+    
+    .features li::before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        color: var(--primary);
+        font-weight: 700;
+    }
+    
+    .cta-section {
+        background: var(--light);
+        text-align: center;
+        padding: 5rem 0;
+    }
+    
+    .cta-section h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: var(--dark);
+    }
+    
+    .cta-section p {
+        color: var(--gray);
+        max-width: 600px;
+        margin: 0 auto 2rem;
+        font-size: 1.125rem;
+    }
+    
+    @media (max-width: 768px) {
+        .programs-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

@@ -1,0 +1,269 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const title = "About Us | Rhythmic Ribbon of Texas";
+const description = "Meet Coach Ella Rasin and the team at Rhythmic Ribbon of Texas. Learn about our philosophy, facility, and what makes us McKinney's premier rhythmic gymnastics academy.";
+---
+
+<Layout title={title} description={description}>
+    <Header />
+    
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <span class="section-tag">About Us</span>
+                <h1>Our Story</h1>
+                <p class="subtitle">Building confident athletes through grace, strength, and dedication.</p>
+            </div>
+        </section>
+        
+        <section class="section">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-image">
+                        <div class="image-placeholder">
+                            <span>Coach Ella</span>
+                        </div>
+                    </div>
+                    
+                    <div class="about-content">
+                        <h2>Meet Coach Ella Rasin</h2>
+                        
+                        <p>With over 15 years of experience in rhythmic gymnastics, Coach Ella founded Rhythmic Ribbon of Texas to share her passion for this beautiful sport with the McKinney community.</p>
+                        
+                        <p>A USAG certified coach and former competitive gymnast, Ella believes in nurturing each athlete's individual potential while fostering a love for movement and self-expression.</p>
+                        
+                        <blockquote>
+                            <p>"Every child deserves the chance to discover their inner grace and strength. Rhythmic gymnastics isn't just about competition - it's about building confidence that lasts a lifetime."</p>
+                            <cite>— Coach Ella</cite>
+                        </blockquote>
+                        
+                        <ul class="credentials">
+                            <li><span>✓</span> USAG Certified Coach</li>
+                            <li><span>✓</span> 15+ Years Experience</li>
+                            <li><span>✓</span> Former Competitive Gymnast</li>
+                            <li><span>✓</span> CPR/First Aid Certified</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section facility">
+            <div class="container">
+                <h2 class="section-title">Our <span class="highlight">Facility</span></h2>
+                
+                <div class="facility-grid">
+                    <div class="facility-info">
+                        <address>
+                            <strong>Rhythmic Ribbon of Texas</strong><br>
+                            4260 Eldorado Parkway<br>
+                            McKinney, TX 75070
+                        </address>
+                        
+                        <p>Our state-of-the-art facility features professional-grade equipment, ample training space, and a welcoming environment designed specifically for rhythmic gymnastics training.</p>
+                        
+                        <ul class="features">
+                            <li><span>•</span> Professional rhythmic gymnastics flooring</li>
+                            <li><span>•</span> Full apparatus collection (ribbon, hoop, ball, clubs, rope)</li>
+                            <li><span>•</span> Ballet barres and mirrors</li>
+                            <li><span>•</span> Comfortable parent viewing area</li>
+                            <li><span>•</span> Safe, clean environment</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="facility-map">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3345.1234567890123!2d-96.6397!3d33.1507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDA5JzAyLjUiTiA5NsKwMzgnMjIuOSJX!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+                            width="100%"
+                            height="100%"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                        ></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <Footer />
+</Layout>
+
+<style>
+    .page-header {
+        background: linear-gradient(135deg, var(--dark) 0%, #1a252f 100%);
+        color: white;
+        padding: 160px 0 4rem;
+        text-align: center;
+    }
+    
+    .page-header h1 {
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+        margin-bottom: 1rem;
+    }
+    
+    .page-header .subtitle {
+        font-size: 1.25rem;
+        color: rgba(255,255,255,0.8);
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        gap: 4rem;
+        align-items: start;
+    }
+    
+    .about-image {
+        position: sticky;
+        top: 120px;
+    }
+    
+    .image-placeholder {
+        aspect-ratio: 3/4;
+        background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+    
+    .about-content h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        color: var(--dark);
+    }
+    
+    .about-content p {
+        font-size: 1.125rem;
+        color: var(--gray);
+        margin-bottom: 1.5rem;
+        line-height: 1.8;
+    }
+    
+    blockquote {
+        border-left: 4px solid var(--primary);
+        padding-left: 1.5rem;
+        margin: 2rem 0;
+        font-style: italic;
+    }
+    
+    blockquote p {
+        font-size: 1.25rem;
+        color: var(--dark);
+        margin-bottom: 0.75rem;
+    }
+    
+    blockquote cite {
+        font-size: 1rem;
+        color: var(--gray);
+        font-style: normal;
+        font-weight: 600;
+    }
+    
+    .credentials {
+        list-style: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+    
+    .credentials li {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-weight: 500;
+    }
+    
+    .credentials span {
+        color: var(--primary);
+        font-weight: 700;
+    }
+    
+    .facility {
+        background: var(--light);
+    }
+    
+    .facility-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: stretch;
+    }
+    
+    .facility-info {
+        background: white;
+        padding: 3rem;
+        border-radius: 16px;
+        box-shadow: var(--shadow);
+    }
+    
+    .facility-info address {
+        font-style: normal;
+        font-size: 1.125rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.8;
+    }
+    
+    .facility-info p {
+        color: var(--gray);
+        margin-bottom: 1.5rem;
+    }
+    
+    .features {
+        list-style: none;
+    }
+    
+    .features li {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 0.75rem;
+        color: var(--dark);
+    }
+    
+    .features span {
+        color: var(--primary);
+        font-weight: 700;
+    }
+    
+    .facility-map {
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        min-height: 400px;
+    }
+    
+    .facility-map iframe {
+        width: 100%;
+        height: 100%;
+        min-height: 400px;
+    }
+    
+    @media (max-width: 1024px) {
+        .about-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .about-image {
+            position: static;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        .facility-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
