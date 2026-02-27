@@ -23,9 +23,7 @@ const description = "Meet Coach Ella Rasin and the team at Rhythmic Ribbon of Te
             <div class="container">
                 <div class="about-grid">
                     <div class="about-image">
-                        <div class="image-placeholder">
-                            <span>Coach Ella</span>
-                        </div>
+                        <img src="/images/coach-ribbon.jpg" alt="Coach Ella teaching ribbon class" class="coach-photo" />
                     </div>
                     
                     <div class="about-content">
@@ -125,17 +123,11 @@ const description = "Meet Coach Ella Rasin and the team at Rhythmic Ribbon of Te
         top: 120px;
     }
     
-    .image-placeholder {
-        aspect-ratio: 3/4;
-        background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+    .coach-photo {
+        width: 100%;
         border-radius: 16px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-family: 'Poppins', sans-serif;
-        font-size: 1.5rem;
-        font-weight: 700;
+        box-shadow: var(--shadow);
+        object-fit: cover;
     }
     
     .about-content h2 {
