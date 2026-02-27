@@ -37,7 +37,7 @@ const currentPath = Astro.url.pathname;
                 </svg>
                 (718) 689-2469
             </a>
-            <a href="/contact/" class="btn btn-primary">Book Trial</a>
+            <a href="/contact/" class="btn btn-primary">Book Free Trial</a>
         </div>
         
         <button class="mobile-menu-btn" aria-label="Toggle menu" onclick="document.querySelector('.mobile-nav').classList.toggle('open')">
@@ -59,6 +59,7 @@ const currentPath = Astro.url.pathname;
             </a>
         ))}
         <a href="tel:7186892469" class="mobile-phone">Call: (718) 689-2469</a>
+        <a href="/contact/" class="btn btn-primary mobile-cta">Book Free Trial</a>
     </nav>
 </header>
 
@@ -71,7 +72,8 @@ const currentPath = Astro.url.pathname;
         z-index: 1000;
         background: rgba(13, 13, 13, 0.98);
         backdrop-filter: blur(10px);
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+        border-bottom: 1px solid rgba(212, 175, 55, 0.1);
     }
     
     .header-content {
@@ -104,8 +106,9 @@ const currentPath = Astro.url.pathname;
         font-weight: 500;
         font-size: 0.9375rem;
         color: var(--cream);
-        transition: color 0.3s;
+        transition: all 0.3s ease;
         position: relative;
+        padding: 0.5rem 0;
     }
     
     .nav-link:hover,
@@ -116,18 +119,18 @@ const currentPath = Astro.url.pathname;
     .nav-link.active::after {
         content: '';
         position: absolute;
-        bottom: -4px;
+        bottom: 0;
         left: 0;
         right: 0;
-        height: 3px;
-        background: var(--primary);
+        height: 2px;
+        background: linear-gradient(90deg, transparent, var(--primary), transparent);
         border-radius: 2px;
     }
     
     .header-actions {
         display: flex;
         align-items: center;
-        gap: 1rem;
+        gap: 1.5rem;
     }
     
     .phone-link {
@@ -136,7 +139,8 @@ const currentPath = Astro.url.pathname;
         gap: 0.5rem;
         font-weight: 600;
         color: var(--cream);
-        transition: color 0.3s;
+        transition: all 0.3s ease;
+        font-size: 0.9375rem;
     }
     
     .phone-link:hover {
@@ -149,6 +153,14 @@ const currentPath = Astro.url.pathname;
         border: none;
         cursor: pointer;
         color: var(--cream);
+        padding: 0.5rem;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+    
+    .mobile-menu-btn:hover {
+        color: var(--primary);
+        background: rgba(212, 175, 55, 0.1);
     }
     
     .mobile-nav {
@@ -158,23 +170,47 @@ const currentPath = Astro.url.pathname;
         left: 0;
         right: 0;
         background: var(--dark);
-        padding: 1rem;
+        padding: 1.5rem;
         flex-direction: column;
         gap: 0.5rem;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        border-top: 1px solid rgba(212, 175, 55, 0.1);
     }
     
     .mobile-nav.open {
         display: flex;
     }
     
+    .mobile-nav .nav-link {
+        padding: 1rem;
+        border-radius: 8px;
+        text-align: center;
+    }
+    
+    .mobile-nav .nav-link:hover,
+    .mobile-nav .nav-link.active {
+        background: rgba(212, 175, 55, 0.1);
+    }
+    
+    .mobile-nav .nav-link.active::after {
+        display: none;
+    }
+    
     .mobile-phone {
         display: block;
         margin-top: 1rem;
         padding-top: 1rem;
-        border-top: 1px solid #eee;
+        border-top: 1px solid var(--dark-tertiary);
         font-weight: 700;
         color: var(--primary);
+        text-align: center;
+        padding: 1rem;
+    }
+    
+    .mobile-cta {
+        margin-top: 0.5rem;
+        text-align: center;
+        justify-content: center;
     }
     
     @media (max-width: 1024px) {

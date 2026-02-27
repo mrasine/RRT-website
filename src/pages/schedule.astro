@@ -131,8 +131,8 @@ const otherPrograms = [
 
 <style>
     .page-header {
-        background: linear-gradient(135deg, var(--dark) 0%, #1a252f 100%);
-        color: white;
+        background: linear-gradient(135deg, #0D0D0D 0%, #1A1A1A 100%);
+        color: #F5F0E6;
         padding: 160px 0 4rem;
         text-align: center;
     }
@@ -140,13 +140,37 @@ const otherPrograms = [
     .page-header h1 {
         font-size: clamp(2.5rem, 5vw, 3.5rem);
         margin-bottom: 1rem;
+        color: #F5F0E6;
     }
     
     .page-header .subtitle {
         font-size: 1.25rem;
-        color: rgba(255,255,255,0.8);
+        color: rgba(245, 240, 230, 0.8);
         max-width: 600px;
         margin: 0 auto;
+    }
+    
+    .section {
+        background: #0D0D0D;
+        padding: 5rem 0;
+    }
+    
+    .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+        color: #F5F0E6;
+    }
+    
+    .section-title .highlight {
+        color: #D4AF37;
+    }
+    
+    .section-subtitle {
+        text-align: center;
+        color: rgba(245, 240, 230, 0.7);
+        margin-bottom: 3rem;
+        font-size: 1.125rem;
     }
     
     .locations-grid {
@@ -156,7 +180,7 @@ const otherPrograms = [
     }
     
     .location-card {
-        background: #1a1a1a;
+        background: #1A1A1A;
         border-radius: 16px;
         padding: 2rem;
         border: 1px solid #333;
@@ -165,17 +189,17 @@ const otherPrograms = [
     .location-header {
         margin-bottom: 1.5rem;
         padding-bottom: 1rem;
-        border-bottom: 2px solid var(--primary);
+        border-bottom: 2px solid #D4AF37;
     }
     
     .location-header h3 {
         font-size: 1.5rem;
-        color: var(--primary);
+        color: #D4AF37;
         margin-bottom: 0.5rem;
     }
     
     .address {
-        color: #999;
+        color: rgba(245, 240, 230, 0.6);
         font-size: 0.9375rem;
     }
     
@@ -203,12 +227,12 @@ const otherPrograms = [
     
     .day {
         font-weight: 700;
-        color: var(--cream);
+        color: #F5F0E6;
         font-size: 0.9375rem;
     }
     
     .time {
-        color: var(--primary);
+        color: #D4AF37;
         font-weight: 600;
     }
     
@@ -220,20 +244,20 @@ const otherPrograms = [
     }
     
     .class-name {
-        color: var(--cream);
+        color: #F5F0E6;
         font-size: 0.9375rem;
     }
     
     .duration {
         font-size: 0.8125rem;
-        color: #888;
+        color: rgba(245, 240, 230, 0.6);
         background: #2a2a2a;
         padding: 0.25rem 0.5rem;
         border-radius: 4px;
     }
     
     .other-programs {
-        background: #0d0d0d;
+        background: #1A1A1A;
     }
     
     .programs-grid {
@@ -244,7 +268,7 @@ const otherPrograms = [
     }
     
     .program-item {
-        background: #1a1a1a;
+        background: #0D0D0D;
         border-radius: 12px;
         padding: 1.5rem;
         display: flex;
@@ -255,13 +279,13 @@ const otherPrograms = [
     
     .program-name {
         font-weight: 600;
-        color: var(--cream);
+        color: #F5F0E6;
         font-size: 1.125rem;
     }
     
     .contact-badge {
         font-size: 0.8125rem;
-        color: var(--primary);
+        color: #D4AF37;
         font-weight: 500;
     }
     
@@ -270,11 +294,11 @@ const otherPrograms = [
     }
     
     .pricing-info {
-        background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+        background: #0D0D0D;
     }
     
     .info-card {
-        background: #1a1a1a;
+        background: #1A1A1A;
         border-radius: 16px;
         padding: 3rem;
         max-width: 700px;
@@ -285,12 +309,12 @@ const otherPrograms = [
     
     .info-card h3 {
         font-size: 1.75rem;
-        color: var(--primary);
+        color: #D4AF37;
         margin-bottom: 1rem;
     }
     
     .info-card p {
-        color: #aaa;
+        color: rgba(245, 240, 230, 0.7);
         margin-bottom: 1.5rem;
         font-size: 1.0625rem;
     }
@@ -301,7 +325,7 @@ const otherPrograms = [
     }
     
     .info-list li {
-        color: var(--cream);
+        color: #F5F0E6;
         padding: 0.5rem 0;
         position: relative;
         padding-left: 1.5rem;
@@ -311,7 +335,7 @@ const otherPrograms = [
         content: '✓';
         position: absolute;
         left: 0;
-        color: var(--primary);
+        color: #D4AF37;
         font-weight: 700;
     }
     

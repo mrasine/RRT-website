@@ -93,8 +93,8 @@ const description = "Meet Coach Ella Rasin and the team at Rhythmic Ribbon of Te
 
 <style>
     .page-header {
-        background: linear-gradient(135deg, var(--dark) 0%, #1a252f 100%);
-        color: white;
+        background: linear-gradient(135deg, #0D0D0D 0%, #1A1A1A 100%);
+        color: #F5F0E6;
         padding: 160px 0 4rem;
         text-align: center;
     }
@@ -102,13 +102,18 @@ const description = "Meet Coach Ella Rasin and the team at Rhythmic Ribbon of Te
     .page-header h1 {
         font-size: clamp(2.5rem, 5vw, 3.5rem);
         margin-bottom: 1rem;
+        color: #F5F0E6;
     }
     
     .page-header .subtitle {
         font-size: 1.25rem;
-        color: rgba(255,255,255,0.8);
+        color: rgba(245, 240, 230, 0.8);
         max-width: 600px;
         margin: 0 auto;
+    }
+    
+    .section {
+        background: #0D0D0D;
     }
     
     .about-grid {
@@ -126,25 +131,25 @@ const description = "Meet Coach Ella Rasin and the team at Rhythmic Ribbon of Te
     .coach-photo {
         width: 100%;
         border-radius: 16px;
-        box-shadow: var(--shadow);
+        box-shadow: 0 8px 32px rgba(0,0,0,0.4);
         object-fit: cover;
     }
     
     .about-content h2 {
         font-size: 2.5rem;
         margin-bottom: 1.5rem;
-        color: var(--dark);
+        color: #F5F0E6;
     }
     
     .about-content p {
         font-size: 1.125rem;
-        color: var(--gray);
+        color: rgba(245, 240, 230, 0.8);
         margin-bottom: 1.5rem;
         line-height: 1.8;
     }
     
     blockquote {
-        border-left: 4px solid var(--primary);
+        border-left: 4px solid #D4AF37;
         padding-left: 1.5rem;
         margin: 2rem 0;
         font-style: italic;
@@ -152,13 +157,13 @@ const description = "Meet Coach Ella Rasin and the team at Rhythmic Ribbon of Te
     
     blockquote p {
         font-size: 1.25rem;
-        color: var(--dark);
+        color: #F5F0E6;
         margin-bottom: 0.75rem;
     }
     
     blockquote cite {
         font-size: 1rem;
-        color: var(--gray);
+        color: #D4AF37;
         font-style: normal;
         font-weight: 600;
     }
@@ -176,15 +181,27 @@ const description = "Meet Coach Ella Rasin and the team at Rhythmic Ribbon of Te
         align-items: center;
         gap: 0.5rem;
         font-weight: 500;
+        color: #F5F0E6;
     }
     
     .credentials span {
-        color: var(--primary);
+        color: #D4AF37;
         font-weight: 700;
     }
     
     .facility {
-        background: var(--light);
+        background: #1A1A1A;
+    }
+    
+    .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+        color: #F5F0E6;
+    }
+    
+    .section-title .highlight {
+        color: #D4AF37;
     }
     
     .facility-grid {
@@ -195,10 +212,10 @@ const description = "Meet Coach Ella Rasin and the team at Rhythmic Ribbon of Te
     }
     
     .facility-info {
-        background: white;
+        background: #1A1A1A;
         padding: 3rem;
         border-radius: 16px;
-        box-shadow: var(--shadow);
+        border: 1px solid #333;
     }
     
     .facility-info address {
@@ -206,10 +223,15 @@ const description = "Meet Coach Ella Rasin and the team at Rhythmic Ribbon of Te
         font-size: 1.125rem;
         margin-bottom: 1.5rem;
         line-height: 1.8;
+        color: #F5F0E6;
+    }
+    
+    .facility-info address strong {
+        color: #D4AF37;
     }
     
     .facility-info p {
-        color: var(--gray);
+        color: rgba(245, 240, 230, 0.8);
         margin-bottom: 1.5rem;
     }
     
@@ -222,18 +244,18 @@ const description = "Meet Coach Ella Rasin and the team at Rhythmic Ribbon of Te
         align-items: center;
         gap: 0.75rem;
         margin-bottom: 0.75rem;
-        color: var(--dark);
+        color: #F5F0E6;
     }
     
     .features span {
-        color: var(--primary);
+        color: #D4AF37;
         font-weight: 700;
     }
     
     .facility-map {
         border-radius: 16px;
         overflow: hidden;
-        box-shadow: var(--shadow);
+        border: 1px solid #333;
         min-height: 400px;
     }
     
