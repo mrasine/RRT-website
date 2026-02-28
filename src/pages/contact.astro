@@ -3,30 +3,15 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
-const title = "Contact Us | Rhythmic Ribbon of Texas";
-const description = "Book a free trial class or get in touch with Rhythmic Ribbon of Texas. Located in McKinney, TX. Call (718) 689-2469 or email us today.";
+const title = "Book Free Trial | Rhythmic Ribbon of Texas";
+const description = "Book your free trial class in McKinney or Frisco. USAG certified coaches. Ages 5+. Schedule online today.";
 
 const faqs = [
-    {
-        q: "What should my child wear to class?",
-        a: "Comfortable athletic wear or a leotard. Hair should be pulled back neatly. Bare feet or gymnastics shoes only - no socks please!"
-    },
-    {
-        q: "How do I know which program is right for my child?",
-        a: "We offer free assessments! Contact us to schedule a trial class where our coaches can evaluate your child's skills and recommend the best program."
-    },
-    {
-        q: "What is your makeup policy?",
-        a: "We understand schedules change. We offer one makeup class per month for absences with advance notice."
-    },
-    {
-        q: "Do you offer private lessons?",
-        a: "Yes! Private lessons are available for students looking for one-on-one coaching. Contact us for availability and rates."
-    },
-    {
-        q: "Can parents watch classes?",
-        a: "Absolutely! We have a comfortable viewing area where parents can observe. We also offer parent observation weeks throughout the year."
-    }
+    { q: "What should my child wear to class?", a: "Leotard or fitted athletic wear, hair in neat bun/ponytail, bare feet or gymnastics shoes, NO jewelry, NO loose clothing." },
+    { q: "How do I know which program is right for my child?", a: "We offer free assessments! Book a trial class where our coaches can evaluate your child's skills and recommend the best program." },
+    { q: "What is your makeup policy?", a: "We understand schedules change. We offer one makeup class per month for absences with advance notice." },
+    { q: "Do you offer private lessons?", a: "Yes! Private lessons are available for one-on-one coaching. Contact us for availability." },
+    { q: "Can parents watch classes?", a: "Absolutely! We have a comfortable viewing area. We also offer parent observation weeks throughout the year." }
 ];
 ---
 
@@ -36,107 +21,40 @@ const faqs = [
     <main>
         <section class="page-header">
             <div class="container">
-                <span class="section-tag">Get In Touch</span>
-                <h1>Start Your<br><span class="highlight">Journey Today</span></h1>
-                <p class="subtitle">Book a free trial class or reach out with any questions.</p>
+                <span class="section-tag">Book Online</span>
+                <h1>Free Trial<br><span class="highlight">Class</span></h1>
+                <p class="subtitle">Select a time below to book your free trial. No credit card required.</p>
             </div>
         </section>
         
-        <section class="section contact-section">
+        <section class="section booking-section">
             <div class="container">
-                <div class="contact-grid">
-                    <div class="contact-form-section">
-                        <h2>Book a Free Trial</h2>
-                        <form name="contact" method="POST" data-netlify="true" class="contact-form">
-                            <input type="hidden" name="form-name" value="contact" />
-                            
-                            <div class="form-group">
-                                <label for="parentName">Parent Name *</label>
-                                <input type="text" id="parentName" name="parentName" required />
-                            </div>
-                            
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="email">Email *</label>
-                                    <input type="email" id="email" name="email" required />
-                                </div>
-                                
-                                <div class="form-group">
-                                    <label for="phone">Phone *</label>
-                                    <input type="tel" id="phone" name="phone" required />
-                                </div>
-                            </div>
-                            
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="childName">Child's Name *</label>
-                                    <input type="text" id="childName" name="childName" required />
-                                </div>
-                                
-                                <div class="form-group">
-                                    <label for="childAge">Child's Age *</label>
-                                    <input type="number" id="childAge" name="childAge" min="3" max="18" required />
-                                </div>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="experience">Gymnastics Experience</label>
-                                <select id="experience" name="experience">
-                                    <option value="">Select experience level</option>
-                                    <option value="none">No experience</option>
-                                    <option value="beginner">Beginner (less than 1 year)</option>
-                                    <option value="intermediate">Intermediate (1-3 years)</option>
-                                    <option value="advanced">Advanced (3+ years)</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="message">Questions or Comments</label>
-                                <textarea id="message" name="message" rows="4"></textarea>
-                            </div>
-                            
-                            <button type="submit" class="btn btn-primary btn-lg">Request Trial Class</button>
-                        </form>
+                <div class="calendly-container">
+                    <div class="calendly-placeholder">
+                        <h3>Book Your Free Trial</h3>
+                        <p>Click below to schedule your free trial class.</p>
+                        <a href="https://calendly.com/YOUR-CALENDLY-LINK" target="_blank" class="btn btn-primary btn-lg">Open Booking Calendar</a>
+                        <p class="help-text">Or call us at (718) 689-2469</p>
                     </div>
-                    
+                </div>
+            </div>
+        </section>
+        
+        <section class="section waiver-section">
+            <div class="container">
+                <div class="waiver-grid">
+                    <div class="waiver-info">
+                        <h2>Complete Your Waiver</h2>
+                        <p>Please complete the online waiver before your first class.</p>
+                        <div class="waiver-options">
+                            <a href="YOUR-GOOGLE-FORM-LINK" target="_blank" class="waiver-option">Complete Online Waiver</a>
+                            <a href="/waiver.pdf" download class="waiver-option">Download PDF Waiver</a>
+                        </div>
+                    </div>
                     <div class="contact-info">
-                        <div class="info-card">
-                            <h3>Contact Information</h3>
-                            
-                            <div class="info-item">
-                                <strong>Phone</strong>
-                                <a href="tel:7186892469">(718) 689-2469</a>
-                            </div>
-                            
-                            <div class="info-item">
-                                <strong>Email</strong>
-                                <a href="mailto:info@rhythmicribbon.com">info@rhythmicribbon.com</a>
-                            </div>
-                            
-                            <div class="info-item">
-                                <strong>Address</strong>
-                                <address>
-                                    4260 Eldorado Parkway<br>
-                                    McKinney, TX 75070
-                                </address>
-                            </div>
-                        </div>
-                        
-                        <div class="info-card">
-                            <h3>Hours</h3>
-                            <div class="hours-item">
-                                <span>Monday - Friday</span>
-                                <span>4:00 PM - 8:00 PM</span>
-                            </div>
-                            <div class="hours-item">
-                                <span>Saturday</span>
-                                <span>9:00 AM - 2:00 PM</span>
-                            </div>
-                            <div class="hours-item">
-                                <span>Sunday</span>
-                                <span>Closed</span>
-                            </div>
-                        </div>
+                        <h3>Questions?</h3>
+                        <div class="info-item"><strong>Phone</strong><a href="tel:7186892469">(718) 689-2469</a></div>
+                        <div class="info-item"><strong>Email</strong><a href="mailto:rhythmicribbonoftexas@gmail.com">rhythmicribbonoftexas@gmail.com</a></div>
                     </div>
                 </div>
             </div>
@@ -145,13 +63,9 @@ const faqs = [
         <section class="section faq-section">
             <div class="container">
                 <h2 class="section-title">Frequently Asked<br><span class="highlight">Questions</span></h2>
-                
                 <div class="faq-grid">
                     {faqs.map(faq => (
-                        <details class="faq-item">
-                            <summary>{faq.q}</summary>
-                            <p>{faq.a}</p>
-                        </details>
+                        <details class="faq-item"><summary>{faq.q}</summary><p>{faq.a}</p></details>
                     ))}
                 </div>
             </div>
@@ -162,219 +76,32 @@ const faqs = [
 </Layout>
 
 <style>
-    .page-header {
-        background: linear-gradient(135deg, #0D0D0D 0%, #1A1A1A 100%);
-        color: #F5F0E6;
-        padding: 160px 0 4rem;
-        text-align: center;
-    }
-    
-    .page-header h1 {
-        font-size: clamp(2.5rem, 5vw, 3.5rem);
-        margin-bottom: 1rem;
-        color: #F5F0E6;
-    }
-    
-    .page-header .subtitle {
-        font-size: 1.25rem;
-        color: rgba(245, 240, 230, 0.8);
-        max-width: 600px;
-        margin: 0 auto;
-    }
-    
-    .contact-section {
-        background: #0D0D0D;
-    }
-    
-    .contact-grid {
-        display: grid;
-        grid-template-columns: 1.5fr 1fr;
-        gap: 4rem;
-    }
-    
-    .contact-form-section h2 {
-        font-size: 2rem;
-        margin-bottom: 2rem;
-        color: #F5F0E6;
-    }
-    
-    .contact-form {
-        background: #1A1A1A;
-        padding: 2.5rem;
-        border-radius: 16px;
-        border: 1px solid rgba(212, 175, 55, 0.2);
-    }
-    
-    .form-group {
-        margin-bottom: 1.5rem;
-    }
-    
-    .form-row {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-    }
-    
-    label {
-        display: block;
-        font-weight: 600;
-        margin-bottom: 0.5rem;
-        color: #D4AF37;
-        font-size: 0.9375rem;
-    }
-    
-    input,
-    select,
-    textarea {
-        width: 100%;
-        padding: 0.75rem 1rem;
-        border: 2px solid rgba(245, 240, 230, 0.2);
-        border-radius: 8px;
-        font-family: inherit;
-        font-size: 1rem;
-        transition: border-color 0.3s;
-        background: #0D0D0D;
-        color: #F5F0E6;
-    }
-    
-    input:focus,
-    select:focus,
-    textarea:focus {
-        outline: none;
-        border-color: #D4AF37;
-    }
-    
-    input::placeholder,
-    textarea::placeholder {
-        color: rgba(245, 240, 230, 0.4);
-    }
-    
-    textarea {
-        resize: vertical;
-    }
-    
-    .contact-info {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-    }
-    
-    .info-card {
-        background: #1A1A1A;
-        padding: 2rem;
-        border-radius: 16px;
-        border: 1px solid rgba(212, 175, 55, 0.2);
-    }
-    
-    .info-card h3 {
-        font-size: 1.25rem;
-        margin-bottom: 1.5rem;
-        color: #D4AF37;
-    }
-    
-    .info-item {
-        margin-bottom: 1.25rem;
-    }
-    
-    .info-item strong {
-        display: block;
-        margin-bottom: 0.25rem;
-        color: rgba(245, 240, 230, 0.6);
-        font-size: 0.875rem;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-    }
-    
-    .info-item a {
-        color: #F5F0E6;
-        font-weight: 600;
-        font-size: 1.125rem;
-        transition: color 0.3s;
-    }
-    
-    .info-item a:hover {
-        color: #D4AF37;
-    }
-    
-    .info-item address {
-        font-style: normal;
-        line-height: 1.6;
-        color: #F5F0E6;
-    }
-    
-    .hours-item {
-        display: flex;
-        justify-content: space-between;
-        padding: 0.75rem 0;
-        border-bottom: 1px solid rgba(245, 240, 230, 0.1);
-        color: #F5F0E6;
-    }
-    
-    .hours-item:last-child {
-        border-bottom: none;
-    }
-    
-    .faq-section {
-        background: #0D0D0D;
-    }
-    
-    .section-title {
-        color: #F5F0E6;
-        text-align: center;
-        font-size: 2.5rem;
-        margin-bottom: 3rem;
-    }
-    
-    .faq-grid {
-        max-width: 800px;
-        margin: 0 auto;
-    }
-    
-    .faq-item {
-        background: #1A1A1A;
-        border-radius: 12px;
-        margin-bottom: 1rem;
-        border: 1px solid rgba(212, 175, 55, 0.2);
-        overflow: hidden;
-    }
-    
-    .faq-item summary {
-        padding: 1.5rem;
-        font-weight: 600;
-        color: #F5F0E6;
-        cursor: pointer;
-        list-style: none;
-        position: relative;
-        padding-right: 3rem;
-    }
-    
-    .faq-item summary::after {
-        content: '+';
-        position: absolute;
-        right: 1.5rem;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 1.5rem;
-        color: #D4AF37;
-    }
-    
-    .faq-item[open] summary::after {
-        content: '−';
-    }
-    
-    .faq-item p {
-        padding: 0 1.5rem 1.5rem;
-        color: rgba(245, 240, 230, 0.8);
-        line-height: 1.7;
-    }
-    
-    @media (max-width: 1024px) {
-        .contact-grid {
-            grid-template-columns: 1fr;
-        }
-        
-        .form-row {
-            grid-template-columns: 1fr;
-        }
-    }
+    .page-header { background: linear-gradient(135deg, #0D0D0D 0%, #1A1A1A 100%); color: #F5F0E6; padding: 160px 0 4rem; text-align: center; }
+    .page-header h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); margin-bottom: 1rem; }
+    .page-header .subtitle { font-size: 1.25rem; color: rgba(245, 240, 230, 0.8); }
+    .booking-section { background: #0D0D0D; padding: 4rem 0; }
+    .calendly-container { max-width: 800px; margin: 0 auto; }
+    .calendly-placeholder { background: #1A1A1A; border-radius: 16px; padding: 4rem 2rem; text-align: center; border: 1px solid rgba(212, 175, 55, 0.2); }
+    .calendly-placeholder h3 { color: #D4AF37; font-size: 1.5rem; margin-bottom: 1rem; }
+    .calendly-placeholder p { color: #AAAAAA; margin-bottom: 2rem; }
+    .help-text { margin-top: 1.5rem; font-size: 0.9rem; }
+    .waiver-section { background: #1A1A1A; padding: 4rem 0; }
+    .waiver-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 4rem; }
+    .waiver-info h2 { color: #F5F0E6; font-size: 2rem; margin-bottom: 1rem; }
+    .waiver-info > p { color: #AAAAAA; margin-bottom: 2rem; }
+    .waiver-options { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .waiver-option { display: flex; align-items: center; gap: 0.75rem; background: #2A2A2A; padding: 1rem 1.5rem; border-radius: 8px; color: #F5F0E6; font-weight: 600; transition: all 0.3s; }
+    .waiver-option:hover { background: #D4AF37; color: #0D0D0D; }
+    .contact-info h3 { color: #F5F0E6; margin-bottom: 1.5rem; }
+    .info-item { margin-bottom: 1.5rem; }
+    .info-item strong { display: block; color: #D4AF37; margin-bottom: 0.25rem; }
+    .info-item a { color: #F5F0E6; }
+    .faq-section { background: #0D0D0D; }
+    .faq-grid { max-width: 800px; margin: 3rem auto 0; }
+    .faq-item { background: #1A1A1A; border-radius: 8px; margin-bottom: 1rem; overflow: hidden; }
+    .faq-item summary { padding: 1.25rem; cursor: pointer; font-weight: 600; color: #F5F0E6; }
+    .faq-item summary::after { content: '+'; float: right; color: #D4AF37; font-size: 1.5rem; }
+    .faq-item[open] summary::after { content: '-'; }
+    .faq-item p { padding: 0 1.25rem 1.25rem; color: #AAAAAA; line-height: 1.6; }
+    @media (max-width: 768px) { .waiver-grid { grid-template-columns: 1fr; } }
 </style>
