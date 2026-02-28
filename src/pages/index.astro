@@ -4,151 +4,405 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
 const title = "Rhythmic Ribbon of Texas | Free Trial Classes McKinney & Frisco";
-const description = "Free trial classes in McKinney & Frisco. USAG certified coaches. Ages 5+. Book online today.";
+const description = "Free beginner trials in McKinney and Frisco. Ages 5+. Book online today.";
 ---
 
 <Layout title={title} description={description}>
-    <Header />
     
+    <!-- Banner -->
+    <div class="banner">
+        <div class="banner-content">
+            <img src="/images/rrt-logo-256.png" alt="Rhythmic Ribbon of Texas" class="banner-logo" />
+            <span class="banner-tagline">Rhythmic Gymnastics Academy</span>
+        </div>
+        <div class="banner-actions">
+            <a href="/contact/" class="btn btn-primary">Book a Free Trial</a>
+            <a href="tel:7186892469" class="btn btn-text">Call/Text 718-689-2469</a>
+        </div>
+    </div>
+
     <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-content">
-                <span class="hero-badge">McKinney & Frisco</span>
-                <h1>Free Trial Classes<br><span class="highlight">Available Now</span></h1>
-                <p class="hero-text">Ages 5+. No experience needed. Book online in 2 minutes.</p>
-                
-                <div class="hero-actions">
-                    <a href="/contact/" class="btn btn-primary btn-lg">Book Free Trial</a>
-                    <a href="tel:7186892469" class="btn btn-outline btn-lg">Call (718) 689-2469</a>
-                </div>
-                
-                <div class="hero-stats">
-                    <div class="stat"><span class="stat-number">5+</span><span class="stat-label">Ages</span></div>
-                    <div class="stat"><span class="stat-number">USAG</span><span class="stat-label">Certified</span></div>
-                    <div class="stat"><span class="stat-number">2</span><span class="stat-label">Locations</span></div>
-                </div>
-            </div>
-            
-            <div class="hero-visual">
-                <img src="/images/hero-competition.jpg" alt="RRT Competition Team" class="hero-image" />
+        <!-- Hero -->
+        <section class="hero-section">
+            <h1>Welcome to the Land of Achievements</h1>
+            <p class="hero-subtitle">Grace and confidence grow through disciplined movement</p>
+            <p>Rhythmic gymnastics combines strength, flexibility, balance, and musical movement. At Rhythmic Ribbon of Texas, children learn proper technique, body control, and focus in a structured and supportive environment.</p>
+            <p>Our beginner free trials are designed for families who want a clear, professional introduction to the sport.</p>
+            <p>Free beginner trials in McKinney and Frisco. Ages 5+. Structured introductions keep first classes calm and organized.</p>
+            <div class="hero-cta">
+                <a href="/contact/" class="btn btn-primary btn-lg">Book a Free Trial</a>
+                <a href="tel:7186892469" class="btn btn-outline btn-lg">Call or text us at 718-689-2469</a>
             </div>
         </section>
-        
+
         <!-- Trial Times -->
-        <section class="section trial-times">
-            <div class="container">
-                <h2 class="section-title">Next Available<br><span class="highlight"> Trial Classes</span></h2>
-                
-                <div class="trial-grid">
-                    <div class="trial-card">
-                        <h3>McKinney</h3>
-                        <p class="trial-address">4260 Eldorado Pkwy, 2nd Floor</p>
-                        <div class="trial-slots">
-                            <div class="trial-slot"><span class="day">Wednesday</span><span class="time">6:00 - 7:30 PM</span></div>
-                            <div class="trial-slot"><span class="day">Saturday</span><span class="time">12:45 - 2:15 PM</span></div>
-                        </div>
-                        <a href="/contact/" class="btn btn-primary">Book McKinney</a>
-                    </div>
-                    
-                    <div class="trial-card">
-                        <h3>Frisco</h3>
-                        <p class="trial-address">7255 Meadow Hill Dr, Field #5</p>
-                        <div class="trial-slots">
-                            <div class="trial-slot"><span class="day">Saturday</span><span class="time">3:00 - 4:30 PM</span></div>
-                        </div>
-                        <a href="/contact/" class="btn btn-primary">Book Frisco</a>
-                    </div>
+        <section class="section">
+            <h2>Next available trials</h2>
+            <div class="trial-cards">
+                <div class="trial-card">
+                    <h3>McKinney</h3>
+                    <p>Wed 6:00 to 7:30 PM</p>
+                    <p>Sat 12:45 to 2:15 PM</p>
                 </div>
-                
-                <p class="trial-note">Trials are free. Ages 5+. No experience required.</p>
-            </div>
-        </section>
-        
-        <!-- Programs -->
-        <section class="section programs">
-            <div class="container">
-                <h2 class="section-title" style="color: #F5F0E6;">Programs for Every<br><span class="highlight">Gymnast</span></h2>
-                <p class="section-subtitle">From first steps on the mat to competitive excellence.</p>
-                
-                <div class="program-cards">
-                    <a href="/programs/#recreational" class="program-card">
-                        <div class="card-icon recreational"></div>
-                        <h3>Recreational</h3>
-                        <p>Ages 5+. Fun fundamentals for beginners.</p>
-                        <span class="card-link">Learn More →</span>
-                    </a>
-                    
-                    <a href="/programs/#preteam" class="program-card">
-                        <div class="card-icon preteam"></div>
-                        <h3>Pre-Team</h3>
-                        <p>Bridge to competitive readiness.</p>
-                        <span class="card-link">Learn More →</span>
-                    </a>
-                    
-                    <a href="/programs/#competitive" class="program-card">
-                        <div class="card-icon competitive"></div>
-                        <h3>Competitive</h3>
-                        <p>USAG Levels 3-10 for dedicated athletes.</p>
-                        <span class="card-link">Learn More →</span>
-                    </a>
+                <div class="trial-card">
+                    <h3>Frisco</h3>
+                    <p>Sat 3:00 to 4:30 PM</p>
                 </div>
             </div>
+            <p class="trial-note">Availability is shown based on age and location.</p>
         </section>
-        
-        <!-- Why RRT -->
-        <section class="section why-rrt">
-            <div class="container">
-                <div class="why-grid">
-                    <div class="why-content">
-                        <span class="section-tag">Why Choose Us</span>
-                        <h2>Expert Coaching in a<br><span class="highlight">Supportive Environment</span></h2>
-                        <p>Coach Ella brings decades of experience and USAG certification. We focus on technical accuracy, discipline, and long-term athlete development.</p>
-                        
-                        <ul class="feature-list">
-                            <li><span class="check">✓</span> USAG Certified Instruction</li>
-                            <li><span class="check">✓</span> Small Class Sizes</li>
-                            <li><span class="check">✓</span> Two Convenient Locations</li>
-                            <li><span class="check">✓</span> Free Trial Classes</li>
-                        </ul>
-                        
-                        <a href="/contact/" class="btn btn-primary">Schedule Your Free Trial</a>
-                    </div>
-                    
-                    <div class="why-visual">
-                        <div class="feature-cards">
-                            <div class="feature-card"><span class="feature-number">15+</span><span class="feature-label">Years Experience</span></div>
-                            <div class="feature-card accent"><span class="feature-label">Located in</span><span class="feature-text">McKinney & Frisco</span></div>
-                        </div>
-                    </div>
+
+        <!-- What is Rhythmic Gymnastics -->
+        <section class="section">
+            <h2>The beauty of rhythmic gymnastics</h2>
+            <p>Rhythmic gymnastics is an Olympic sport that blends athletic training with controlled, expressive movement.</p>
+            <p>Children develop flexibility, coordination, balance, and strength while learning to move with precision and awareness.</p>
+            <p>Training also supports focus, discipline, and confidence. These skills benefit children both in athletics and in everyday life.</p>
+        </section>
+
+        <!-- Skills Beyond Gym -->
+        <section class="section">
+            <h2>Skills that carry beyond the gym</h2>
+            <ul class="skills-list">
+                <li>Improved flexibility, balance, and coordination</li>
+                <li>Stronger body awareness and posture</li>
+                <li>Increased focus and discipline</li>
+                <li>Confidence through structured progress</li>
+                <li>Positive sportsmanship and teamwork</li>
+            </ul>
+        </section>
+
+        <!-- Beginner Trials -->
+        <section class="section">
+            <h2>A clear and supportive introduction</h2>
+            <p>Beginner trials are created specifically for first-time athletes.</p>
+            <p>Classes follow a structured format so athletes can learn fundamentals at an appropriate pace.</p>
+            <p>Parents can expect clear expectations, organized instruction, and consistent communication throughout the process.</p>
+        </section>
+
+        <!-- What to Expect -->
+        <section class="section">
+            <h2>What to expect</h2>
+            <p>A four-step path keeps the process calm and transparent.</p>
+            <ol class="steps-list">
+                <li><strong>Choose a location and trial time</strong> - Select the studio and session that works best for your family.</li>
+                <li><strong>Submit the required waiver</strong> - Complete the waiver immediately after requesting a trial to secure the spot.</li>
+                <li><strong>Receive confirmation details</strong> - We email the confirmed time along with arrival instructions and attire guidance.</li>
+                <li><strong>Attend the scheduled trial class</strong> - Arrive a few minutes early so your athlete can get oriented before class begins.</li>
+            </ol>
+            <p class="trial-note">Trials are confirmed after the waiver is completed.</p>
+        </section>
+
+        <!-- Locations -->
+        <section class="section">
+            <h2>Where we train</h2>
+            <p>Studios in McKinney and Frisco host beginner rhythmic gymnastics trials.</p>
+            <div class="locations-grid">
+                <div class="location-card">
+                    <h3>McKinney</h3>
+                    <p>4260 Eldorado Pkwy, 2nd Floor</p>
+                    <p>McKinney, TX 75070</p>
+                    <p class="location-note">Beginner trials: Wed 6:00 PM, Sat 12:45 PM</p>
+                </div>
+                <div class="location-card">
+                    <h3>Frisco</h3>
+                    <p>7255 Meadow Hill Dr, Field #5</p>
+                    <p>Frisco, TX 75034</p>
+                    <p class="location-note">Beginner trials: Sat 3:00 PM</p>
                 </div>
             </div>
         </section>
-        
-        <!-- CTA -->
-        <section class="cta-section">
-            <div class="container">
-                <span class="section-tag">Get Started Today</span>
-                <h2>Ready to Start the Journey?</h2>
-                <p>Book a free trial class and discover why families choose Rhythmic Ribbon of Texas.</p>
-                <a href="/contact/" class="btn btn-primary btn-lg">Book Free Trial Now</a>
+
+        <!-- Gallery Preview -->
+        <section class="section">
+            <h2>The environment in motion</h2>
+            <p>Images from recent trials, practices, and competitions show how carefully structured sessions balance focus, musicality, and encouragement.</p>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="/images/flexibility.jpg" alt="Hands-on fundamentals" />
+                    <p>Hands-on fundamentals</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="/images/ribbon-class.jpg" alt="Apparatus discovery" />
+                    <p>Apparatus discovery</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="/images/competition-team.jpg" alt="Team artistry" />
+                    <p>Team artistry</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="/images/coach-ribbon.jpg" alt="Ribbon control" />
+                    <p>Ribbon control</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Coach -->
+        <section class="section">
+            <h2>Guided by experienced leadership</h2>
+            <p>Coach Ella leads every trial and training plan.</p>
+            <p>Coach Ella is the Founder and Head Coach of Rhythmic Ribbon of Texas. She brings decades of experience in rhythmic gymnastics coaching and athlete development.</p>
+            <p>Coach Ella is a USAG Certified Professional Member and serves in leadership roles within USA Gymnastics in Texas and Region 6. Her approach emphasizes technical accuracy, discipline, and long-term athlete development in a structured environment.</p>
+        </section>
+
+        <!-- What to Wear -->
+        <section class="section">
+            <h2>What to wear and bring</h2>
+            <p>Simple attire keeps the focus on movement quality and comfort.</p>
+            <p>A leotard and white socks are recommended. If a leotard is not available, comfortable athletic clothing is acceptable for the trial.</p>
+            <p>Please bring water and arrive a few minutes early.</p>
+        </section>
+
+        <!-- Booking CTA -->
+        <section class="section booking-section" id="booking">
+            <h2>Book a Free Trial</h2>
+            <p>Request a trial time below. You will receive the required waiver form shortly after booking. Once the waiver is completed, your trial will be confirmed and details will be sent by email.</p>
+            
+            <div class="booking-form">
+                <div class="form-group">
+                    <label>Parent or guardian name *</label>
+                    <input type="text" placeholder="Taylor Morgan" />
+                </div>
+                <div class="form-group">
+                    <label>Email *</label>
+                    <input type="email" placeholder="you@email.com" />
+                    <span class="form-hint">We will send confirmations and waiver links here.</span>
+                </div>
+                <div class="form-group">
+                    <label>Mobile phone *</label>
+                    <input type="tel" placeholder="(469) 555-1234" />
+                    <span class="form-hint">We'll text you confirmation details.</span>
+                </div>
+                <div class="form-group">
+                    <label>Athlete name *</label>
+                    <input type="text" placeholder="Athlete full name" />
+                </div>
+                <div class="form-group">
+                    <label>Athlete date of birth *</label>
+                    <input type="date" />
+                </div>
+                <div class="form-group">
+                    <label>Preferred studio *</label>
+                    <select>
+                        <option>McKinney</option>
+                        <option>Frisco</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Session time *</label>
+                    <select>
+                        <option>Wed 6:00 to 7:30 PM (McKinney)</option>
+                        <option>Sat 12:45 to 2:15 PM (McKinney)</option>
+                        <option>Sat 3:00 to 4:30 PM (Frisco)</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg">Limited spots - Book your free trial</button>
+                <p class="form-note">You will receive the required waiver form shortly after booking your free trial.</p>
             </div>
         </section>
     </main>
-    
+
     <Footer />
 </Layout>
 
 <style>
-    .trial-times { background: #1A1A1A; padding: 5rem 0; }
-    .trial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 3rem; }
-    .trial-card { background: #2A2A2A; border-radius: 16px; padding: 2rem; border: 1px solid rgba(212, 175, 55, 0.3); text-align: center; }
-    .trial-card h3 { color: #D4AF37; font-size: 1.5rem; margin-bottom: 0.5rem; }
-    .trial-address { color: #AAAAAA; font-size: 0.9rem; margin-bottom: 1.5rem; }
-    .trial-slots { margin-bottom: 1.5rem; }
-    .trial-slot { display: flex; justify-content: space-between; padding: 0.75rem; background: #0D0D0D; border-radius: 8px; margin-bottom: 0.5rem; }
-    .trial-slot .day { font-weight: 600; color: #F5F0E6; }
-    .trial-slot .time { color: #D4AF37; }
-    .trial-note { text-align: center; color: #AAAAAA; margin-top: 2rem; font-size: 0.9rem; }
-    .section-subtitle { text-align: center; color: rgba(245, 240, 230, 0.7); font-size: 1.1rem; margin-bottom: 3rem; }
+    .banner {
+        background: #0D0D0D;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        border-bottom: 1px solid #D4AF37;
+    }
+    .banner-content {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    .banner-logo {
+        height: 50px;
+    }
+    .banner-tagline {
+        color: #F5F0E6;
+        font-size: 0.9rem;
+    }
+    .banner-actions {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
+    .btn-text {
+        color: #F5F0E6;
+        text-decoration: none;
+        font-size: 0.9rem;
+    }
+    
+    .hero-section {
+        background: #0D0D0D;
+        color: #F5F0E6;
+        padding: 4rem 2rem;
+        text-align: center;
+    }
+    .hero-section h1 {
+        font-size: clamp(2rem, 4vw, 3rem);
+        margin-bottom: 1rem;
+        color: #D4AF37;
+    }
+    .hero-subtitle {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+    }
+    .hero-section p {
+        max-width: 700px;
+        margin: 0 auto 1.5rem;
+        line-height: 1.7;
+        color: rgba(245, 240, 230, 0.85);
+    }
+    .hero-cta {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+    }
+    
+    .section {
+        padding: 4rem 2rem;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    .section h2 {
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        color: #D4AF37;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+    .section > p {
+        line-height: 1.8;
+        color: rgba(245, 240, 230, 0.85);
+        margin-bottom: 1rem;
+    }
+    
+    .trial-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin: 2rem 0;
+    }
+    .trial-card {
+        background: #1A1A1A;
+        padding: 2rem;
+        border-radius: 8px;
+        text-align: center;
+        border: 1px solid rgba(212, 175, 55, 0.3);
+    }
+    .trial-card h3 {
+        color: #D4AF37;
+        margin-bottom: 1rem;
+    }
+    .trial-note {
+        text-align: center;
+        color: #888;
+        font-size: 0.9rem;
+        margin-top: 1rem;
+    }
+    
+    .skills-list, .steps-list {
+        color: rgba(245, 240, 230, 0.85);
+        line-height: 2;
+        padding-left: 1.5rem;
+    }
+    .steps-list li {
+        margin-bottom: 1rem;
+    }
+    
+    .locations-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    .location-card {
+        background: #1A1A1A;
+        padding: 2rem;
+        border-radius: 8px;
+        border: 1px solid rgba(212, 175, 55, 0.3);
+    }
+    .location-card h3 {
+        color: #D4AF37;
+    }
+    .location-note {
+        color: #D4AF37;
+        font-size: 0.9rem;
+        margin-top: 1rem;
+    }
+    
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+    .gallery-item {
+        background: #1A1A1A;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    .gallery-item img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    .gallery-item p {
+        padding: 1rem;
+        text-align: center;
+        font-size: 0.9rem;
+    }
+    
+    .booking-section {
+        background: #1A1A1A;
+        max-width: 600px;
+    }
+    .booking-form {
+        margin-top: 2rem;
+    }
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+    .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: #F5F0E6;
+        font-weight: 600;
+    }
+    .form-group input, .form-group select {
+        width: 100%;
+        padding: 0.75rem;
+        background: #0D0D0D;
+        border: 1px solid #333;
+        border-radius: 4px;
+        color: #F5F0E6;
+        font-size: 1rem;
+    }
+    .form-hint {
+        display: block;
+        font-size: 0.8rem;
+        color: #888;
+        margin-top: 0.25rem;
+    }
+    .form-note {
+        text-align: center;
+        font-size: 0.85rem;
+        color: #888;
+        margin-top: 1rem;
+    }
+    
+    @media (max-width: 768px) {
+        .banner {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
 </style>
